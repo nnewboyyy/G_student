@@ -35,6 +35,29 @@
       },
       "dependsOn": "build",
       "problemMatcher": []
+    },
+    {
+      "label": "make: build",
+      "detail": "使用 Makefile 编译（mingw32-make）",
+      "type": "shell",
+      "command": "mingw32-make",
+      "args": [],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "group": "build",
+      "problemMatcher": ["$gcc"]
+    },
+    {
+      "label": "make: run",
+      "detail": "使用 Makefile 编译并运行（mingw32-make run）",
+      "type": "shell",
+      "command": "mingw32-make",
+      "args": ["run"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
     }
   ]
 }
