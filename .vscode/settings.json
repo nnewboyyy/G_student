@@ -1,0 +1,29 @@
+{
+  "files.encoding": "utf8",
+  "files.eol": "\r\n",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+
+  "terminal.integrated.defaultProfile.windows": "PowerShell (UTF-8)",
+  "terminal.integrated.profiles.windows": {
+    "PowerShell (UTF-8)": {
+      "source": "PowerShell",
+      "args": ["-NoExit", "-Command", "chcp 65001 > $null"]
+    }
+  },
+  "terminal.integrated.env.windows": {
+    "PATH": "D:\\MinGW\\mingw32\\bin;${env:PATH}"
+  },
+
+  "C_Cpp.default.compilerPath": "D:\\MinGW\\mingw32\\bin\\gcc.exe",
+  "C_Cpp.default.cStandard": "c17",
+  "C_Cpp.default.intelliSenseMode": "windows-gcc-x86",
+  "C_Cpp.errorSquiggles": "enabled",
+
+  "code-runner.runInTerminal": true,
+  "code-runner.saveFileBeforeRun": true,
+  "code-runner.clearPreviousOutput": true,
+  "code-runner.executorMap": {
+    "c": "cd $dir && gcc -finput-charset=UTF-8 -fexec-charset=UTF-8 -Wall -g $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
+  }
+}

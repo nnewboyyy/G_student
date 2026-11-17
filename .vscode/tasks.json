@@ -1,0 +1,40 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build",
+      "detail": "使用 gcc 编译 students_g.c（源码与输出均为 UTF-8）",
+      "type": "shell",
+      "command": "gcc",
+      "args": [
+        "-finput-charset=UTF-8",
+        "-fexec-charset=UTF-8",
+        "-Wall",
+        "-g",
+        "students_g.c",
+        "-o",
+        "students_g.exe"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"]
+    },
+    {
+      "label": "run",
+      "detail": "先编译，再在 UTF-8 代码页下运行",
+      "type": "shell",
+      "command": "cmd",
+      "args": ["/c", "chcp 65001 >nul && students_g.exe"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "dependsOn": "build",
+      "problemMatcher": []
+    }
+  ]
+}
